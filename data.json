@@ -1,0 +1,9 @@
+{
+  "saldo_total": 0.0,
+  "lucro_percent": 0.0,
+  "ciclo": 0,
+  "ultima_atualizacao": "2025-10-22T00:00:00Z",
+  "logs": [
+    {"hora": "00:00:00", "mensagem": "Bot iniciado (modo DRY_RUN)."}
+  ]
+}
