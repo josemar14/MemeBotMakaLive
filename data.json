@@ -1,9 +1,19 @@
 {
-  "saldo_total": 0.0,
-  "lucro_percent": 0.0,
+  "saldo_total": 0,
+  "lucro_percent": 0,
   "ciclo": 0,
-  "ultima_atualizacao": "2025-10-22T00:00:00Z",
+  "ultima_atualizacao": "2025-11-02T00:00:00Z",
   "logs": [
-    {"hora": "00:00:00", "mensagem": "Bot iniciado (modo DRY_RUN)."}
+    {
+      "hora": "00:00:00",
+      "mensagem": "Inicializando dashboard..."
+    }
+  ],
+  "positions": [
+    {
+      "symbol": "TKN",
+      "invested_usdt": 0,
+      "bought_amount": 0
+    }
   ]
 }
