@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MemeBot MakaLive — Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📊 MemeBot MakaLive</h1>
+    <p class="subtitle">Monitoramento em tempo real das operações do bot</p>
+
+    <div id="status">
+      <div class="card">
+        <h2>💰 Saldo Total</h2>
+        <p id="saldo">--</p>
+      </div>
+      <div class="card">
+        <h2>📈 Lucro Atual</h2>
+        <p id="lucro">--</p>
+      </div>
+      <div class="card">
+        <h2>🔁 Ciclo</h2>
+        <p id="ciclo">--</p>
+      </div>
+      <div class="card">
+        <h2>🕓 Última Atualização</h2>
+        <p id="atualizacao">--</p>
+      </div>
+    </div>
+
+    <div id="alertas">
+      <h2>📢 Últimos Logs</h2>
+      <ul id="logs"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
