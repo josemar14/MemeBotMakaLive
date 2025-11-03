@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MemeBot MakaLive — Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MemeBot Maka Live</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    text-align: center;
+    padding: 30px;
+  }
+  h1 { color: #00ff9d; }
+  .card {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(0,255,157,0.2);
+  }
+  .value { font-size: 1.4em; margin: 5px 0; }
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>📊 MemeBot MakaLive</h1>
-    <p class="subtitle">Monitoramento em tempo real das operações do bot</p>
-
-    <div id="status">
-      <div class="card">
-        <h2>💰 Saldo Total</h2>
-        <p id="saldo">--</p>
-      </div>
-      <div class="card">
-        <h2>📈 Lucro Atual</h2>
-        <p id="lucro">--</p>
-      </div>
-      <div class="card">
-        <h2>🔁 Ciclo</h2>
-        <p id="ciclo">--</p>
-      </div>
-      <div class="card">
-        <h2>🕓 Última Atualização</h2>
-        <p id="atualizacao">--</p>
-      </div>
-    </div>
-
-    <div id="alertas">
-      <h2>📢 Últimos Logs</h2>
-      <ul id="logs"></ul>
-    </div>
+  <h1>📊 MemeBot Maka Live</h1>
+  <div class="card">
+    <div>💰 <b>Saldo:</b> <span id="saldo">--</span> USDT</div>
+    <div>📈 <b>Lucro:</b> <span id="lucro">--</span>%</div>
+    <div>🔁 <b>Ciclo:</b> <span id="ciclo">--</span></div>
+    <div>🕓 <b>Última atualização:</b> <span id="ultima">--</span></div>
   </div>
-
-  <script src="script.js"></script>
+  <script>
+    async function atualizar(){
+      try{
+        const resp = await fetch('data.json?_=' + Date.now());
+        const data = await resp.json();
+        document.getElementById("saldo").textContent = data.saldo_total.toFixed(2);
+        document.getElementById("lucro").textContent = data.lucro_percent.toFixed(2);
+        document.getElementById("ciclo").textContent = data.ciclo;
+        document.getElementById("ultima").textContent = new Date(data.ultima_atualizacao).toLocaleString();
+      }catch(e){
+        console.error("Erro ao carregar data.json:", e);
+      }
+    }
+    atualizar();
+    setInterval(atualizar, 15000);
+  </script>
 </body>
 </html>
