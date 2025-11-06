@@ -1,19 +1,13 @@
 {
-  "saldo_total": 0,
-  "lucro_percent": 0,
-  "ciclo": 0,
-  "ultima_atualizacao": "2025-11-02T00:00:00Z",
+  "saldo_total": 100.0,
+  "lucro_percent": 0.0,
+  "ciclo": 1,
+  "ultima_atualizacao": "2025-11-06T23:11:57.674680+00:00",
   "logs": [
     {
-      "hora": "00:00:00",
-      "mensagem": "Inicializando dashboard..."
+      "hora": "23:11:57",
+      "mensagem": "Compras ciclo 1"
     }
   ],
-  "positions": [
-    {
-      "symbol": "TKN",
-      "invested_usdt": 0,
-      "bought_amount": 0
-    }
-  ]
+  "positions": []
 }
