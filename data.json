@@ -1,12 +1,12 @@
 {
-  "saldo_total": 100.0,
+  "saldo_total": 0.0,
   "lucro_percent": 0.0,
   "ciclo": 1,
-  "ultima_atualizacao": "2025-11-06T23:11:57.674680+00:00",
+  "ultima_atualizacao": "2025-11-06T23:12:01.669155+00:00",
   "logs": [
     {
-      "hora": "23:11:57",
-      "mensagem": "Compras ciclo 1"
+      "hora": "23:12:01",
+      "mensagem": "Monitorando posi\u00e7\u00f5es"
     }
   ],
   "positions": []
