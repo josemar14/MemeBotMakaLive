@@ -2,10 +2,10 @@
   "saldo_total": 0.0,
   "lucro_percent": 0.0,
   "ciclo": 1,
-  "ultima_atualizacao": "2025-11-08T16:22:37.804146+00:00",
+  "ultima_atualizacao": "2025-11-08T16:22:58.155608+00:00",
   "logs": [
     {
-      "hora": "16:22:37",
+      "hora": "16:22:58",
       "mensagem": "Monitorando posi\u00e7\u00f5es"
     }
   ],
