@@ -1,1 +1,76 @@
+name: 🚀 Build and Deploy MemeBot Dashboard
 
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "index.html"
+      - "data.json"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧩 Checkout repositório
+        uses: actions/checkout@v4
+
+      - name: 🕓 Log de início do build
+        run: echo "⏰ Build iniciado em $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+
+      - name: ⚙️ Verificar mudanças em data.json
+        id: check_changes
+        run: |
+          if git diff --name-only HEAD~1 | grep -q "data.json"; then
+            echo "data.json modificado ✅"
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "data.json não mudou ❌ — Build será cancelado."
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: ❌ Cancelar se data.json não mudou
+        if: steps.check_changes.outputs.changed == 'false'
+        run: exit 0
+
+      - name: 🧱 Criar diretório de deploy
+        run: |
+          mkdir -p dist
+          cp index.html dist/
+          cp data.json dist/
+          echo "✅ Arquivos copiados para dist/"
+          ls -l dist
+
+      - name: 📦 Upload artefato para GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: ✅ Log de finalização
+        run: echo "🏁 Build finalizado às $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 🚀 Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: 🗓️ Log do deploy concluído
+        run: echo "🌍 Deploy concluído com sucesso às $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+name
