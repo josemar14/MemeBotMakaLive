@@ -2,10 +2,10 @@
   "saldo_total": 0.0,
   "lucro_percent": 0.0,
   "ciclo": 6,
-  "ultima_atualizacao": "2025-11-11T21:02:58.335336+00:00",
+  "ultima_atualizacao": "2025-11-11T21:02:59.529163+00:00",
   "logs": [
     {
-      "hora": "21:02:58",
+      "hora": "21:02:59",
       "mensagem": "Waiting for trigger"
     }
   ],
