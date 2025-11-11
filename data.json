@@ -2,12 +2,17 @@
   "saldo_total": 0.0,
   "lucro_percent": 0.0,
   "ciclo": 6,
-  "ultima_atualizacao": "2025-11-11T17:51:56.884829+00:00",
+  "ultima_atualizacao": "2025-11-11T17:51:58.123304+00:00",
   "logs": [
     {
-      "hora": "17:51:56",
-      "mensagem": "Ciclo 6 finalizado. Recebido 0E-8 USDT."
+      "hora": "17:51:58",
+      "mensagem": "Waiting for trigger"
     }
   ],
-  "positions": []
+  "positions": [],
+  "bases": {
+    "base_previous": 2.41008615,
+    "base_compra": null,
+    "sell_base": null
+  }
 }
