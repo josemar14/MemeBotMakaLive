@@ -1,13 +1,18 @@
 {
-  "saldo_total": 0.0,
+  "saldo_total": 100.0,
   "lucro_percent": 0.0,
-  "ciclo": 1,
-  "ultima_atualizacao": "2025-11-11T15:33:31.896274+00:00",
+  "ciclo": 0,
+  "ultima_atualizacao": "2025-11-11T15:37:42.803174+00:00",
   "logs": [
     {
-      "hora": "15:33:31",
-      "mensagem": "Monitorando posi\u00e7\u00f5es"
+      "hora": "15:37:42",
+      "mensagem": "Base inicial definida"
     }
   ],
-  "positions": []
+  "positions": [],
+  "bases": {
+    "base_previous": 9.68000598,
+    "base_compra": null,
+    "sell_base": null
+  }
 }
