@@ -2,10 +2,10 @@
   "saldo_total": 4.840018,
   "lucro_percent": 0.0,
   "ciclo": 41,
-  "ultima_atualizacao": "2025-11-12T13:23:28.457290+00:00",
+  "ultima_atualizacao": "2025-11-12T13:23:48.978556+00:00",
   "logs": [
     {
-      "hora": "13:23:28",
+      "hora": "13:23:48",
       "mensagem": "monitoring after buy"
     }
   ],
