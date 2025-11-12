@@ -1,11 +1,11 @@
 {
   "saldo_total": 0.0,
   "lucro_percent": 0.0,
-  "ciclo": 98,
-  "ultima_atualizacao": "2025-11-12T15:00:58.749410+00:00",
+  "ciclo": 99,
+  "ultima_atualizacao": "2025-11-12T15:01:20.741809+00:00",
   "logs": [
     {
-      "hora": "15:00:58",
+      "hora": "15:01:20",
       "mensagem": "Sem queda suficiente: current_sum 9.760006 > buy_trigger 4.598017"
     }
   ],
