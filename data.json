@@ -1,18 +1,13 @@
 {
-  "saldo_total": 0.0,
+  "saldo_total": 4.840018,
   "lucro_percent": 0.0,
-  "ciclo": 10,
-  "ultima_atualizacao": "2025-11-12T11:58:52.283080+00:00",
+  "ciclo": 41,
+  "ultima_atualizacao": "2025-11-12T13:16:58.527601+00:00",
   "logs": [
     {
-      "hora": "11:58:52",
-      "mensagem": "Waiting for trigger"
+      "hora": "13:16:58",
+      "mensagem": "monitoring after buy"
     }
   ],
-  "positions": [],
-  "bases": {
-    "base_previous": 4.34e-05,
-    "base_compra": null,
-    "sell_base": null
-  }
+  "positions": []
 }
